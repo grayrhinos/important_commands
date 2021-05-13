@@ -5,3 +5,6 @@
 - Command to download folder from GCP Cloud Strorage
     gsutil cp -r gs://bucketname/folder-name local-location
     gsutil -m cp -r gs://bucketname/folder-name local-location
+    
+- Command to update dependencies and recreate docker image
+    docker-compose up --force-recreate --always-recreate-deps -V --build
