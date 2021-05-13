@@ -1,0 +1,7 @@
+- Command to upload folder to GCP Cloud Storage
+    gsutil cp -r folder-name gs://bucketname/
+    gsutil -m cp -r folder-name gs://bucketname (-m can be used to upload large number of files, uses multi-threaded copy)
+  
+- Command to download folder from GCP Cloud Strorage
+    gsutil cp -r gs://bucketname/folder-name local-location
+    gsutil -m cp -r gs://bucketname/folder-name local-location
