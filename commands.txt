@@ -15,3 +15,10 @@
 - To delete all the images:
     docker rmi -f $(docker images -a -q)
 
+
+
+UBUNTU COMMANDS
+- Update the repositories
+  sudo apt-get update
+- Run the upgrade
+  sudo apt-get dist-upgrade
