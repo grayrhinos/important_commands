@@ -14,6 +14,13 @@
     
 - To delete all the images:
     docker rmi -f $(docker images -a -q)
+- Delete all dangling data (containers stopped, volumes without containers, images with no containers)
+    docker system prune
+    
+    docker container prune
+    docker image prune
+    docker network prune
+    docker volume prune
 
 
 
