@@ -29,3 +29,7 @@ UBUNTU COMMANDS
   sudo apt-get update
 - Run the upgrade
   sudo apt-get dist-upgrade
+- Finding all the files with specific extentions
+  find . -name "*.bak" -type f
+- Deleting files with specific extentions
+  find . -name "*.bak" -type f -delete
