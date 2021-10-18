@@ -1,42 +1,49 @@
 - Command to upload folder to GCP Cloud Storage
-    gsutil cp -r folder-name gs://bucketname/
-    gsutil -m cp -r folder-name gs://bucketname (-m can be used to upload large number of files, uses multi-threaded copy)
+    $ gsutil cp -r folder-name gs://bucketname/
+    $ gsutil -m cp -r folder-name gs://bucketname (-m can be used to upload large number of files, uses multi-threaded copy)
   
 - Command to download folder from GCP Cloud Strorage
-    gsutil cp -r gs://bucketname/folder-name local-location
-    gsutil -m cp -r gs://bucketname/folder-name local-location
+    $ gsutil cp -r gs://bucketname/folder-name local-location
+    $ gsutil -m cp -r gs://bucketname/folder-name local-location
     
 - Command to update dependencies and recreate docker image
-    docker-compose up --force-recreate --always-recreate-deps -V --build
+    $ docker-compose up --force-recreate --always-recreate-deps -V --build
 
 - To delete all containers including its volumes use:
-    docker rm -vf $(docker ps -a -q)
+    $ docker rm -vf $(docker ps -a -q)
     
 - To delete all the images:
-    docker rmi -f $(docker images -a -q)
+    $ docker rmi -f $(docker images -a -q)
 - Delete all dangling data (containers stopped, volumes without containers, images with no containers)
-    docker system prune
+    $ docker system prune
     
-    docker container prune
-    docker image prune
-    docker network prune
-    docker volume prune
+    $ docker container prune
+    $ docker image prune
+    $ docker network prune
+    $ docker volume prune
 
 
 
 UBUNTU COMMANDS
 - Update the repositories
-  sudo apt-get update
+  $ sudo apt-get update
 - Run the upgrade
-  sudo apt-get dist-upgrade
+  $ sudo apt-get dist-upgrade
 - Finding all the files with specific extentions
-  find . -name "*.bak" -type f
+  $ find . -name "*.bak" -type f
 - Deleting files with specific extentions
-  find . -name "*.bak" -type f -delete
+  $ find . -name "*.bak" -type f -delete
 
 VIRTUAL ENVIRONMENT
-- mkvirtualenv my_django_environment - create a virtual environment
-- deactivate — Exit out of the current Python virtual environment
-- workon — List available virtual environments
-- workon name_of_environment — Activate the specified Python virtual environment
-- rmvirtualenv name_of_environment — Remove the specified environment.
+- $ mkvirtualenv my_django_environment - create a virtual environment
+- $ deactivate — Exit out of the current Python virtual environment
+- $ workon — List available virtual environments
+- $ workon name_of_environment — Activate the specified Python virtual environment
+- $ rmvirtualenv name_of_environment — Remove the specified environment.
+
+DJANGO
+- After making changes to models you should re-run your database migrations to add changes
+    $ python3 manage.py makemigrations
+    $ python3 manage.py migrate
+- Run the development web server from within the folder
+    $ python3 manage.py runserver
