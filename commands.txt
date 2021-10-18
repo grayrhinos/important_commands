@@ -33,3 +33,10 @@ UBUNTU COMMANDS
   find . -name "*.bak" -type f
 - Deleting files with specific extentions
   find . -name "*.bak" -type f -delete
+
+VIRTUAL ENVIRONMENT
+- mkvirtualenv my_django_environment - create a virtual environment
+- deactivate — Exit out of the current Python virtual environment
+- workon — List available virtual environments
+- workon name_of_environment — Activate the specified Python virtual environment
+- rmvirtualenv name_of_environment — Remove the specified environment.
