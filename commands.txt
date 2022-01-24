@@ -39,7 +39,9 @@ UBUNTU COMMANDS
   $ sudo ss -tulpn | grep LISTEN
   $ sudo lsof -i:22 ## see a specific port such as 22 ##
   $ sudo nmap -sTU -O IP-address-Here
-
+- Give full permission to folder and subfolder
+  $ sudo chmod -R 777 DirectoryName
+  $ chmod -R a+rwx path
 VIRTUAL ENVIRONMENT
 - $ mkvirtualenv my_django_environment - create a virtual environment
 - $ deactivate — Exit out of the current Python virtual environment
